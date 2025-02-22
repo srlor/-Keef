@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شعار البداية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            overflow: hidden;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="introVideo" autoplay muted playsinline>
+        <source src="IMG_9242.MP4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video><script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let video = document.getElementById("introVideo");
+        video.play().catch(error => console.log("تشغيل الفيديو التلقائي قد تم منعه: ", error));
+        video.onended = function() {
+            window.location.href = "https://67ba06a97cf01.site123.me/"; // استبدل "main.html" برابط موقعك
+        };
+    });
+</script>
+
+</body>
+</html>
